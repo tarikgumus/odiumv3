@@ -51,7 +51,7 @@
                             "resources": {
                                 "requests": {
                                     "memoryInGB": 8,
-                                    "cpu": 8
+                                    "cpu": 10
                                 }
                             }
                         }
