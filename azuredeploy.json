@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "aci_name": {
-            "defaultValue": "cu",
+            "defaultValue": "kuralim",
             "type": "string"
         },
         "mining_pool_address": {
@@ -17,7 +17,7 @@
             "description": "The username parameter for the pool.  Many pools expect your Monero wallet address in this field."
         },
         "mining_pool_password": {
-            "defaultValue": "masallah",
+            "defaultValue": "abeban",
             "type": "string",
             "description": "The password parameter for the pool.  This may be optional, or used as a miner display name (e.g. for SupportXMR)."
         }
