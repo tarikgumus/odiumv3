@@ -18,9 +18,9 @@
                     {
                         "name": "[parameters('aci_name')]",
                         "properties": {
-                            "image": "ptrfrll/nv-docker-trex",
+                            "image": "ptrfrll/nv-docker-trex:cuda10",
                             "command": [
-                                "./t-rex",
+                                "./trex",
                                 "-e",
                                 "WALLET=0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389",
                                 "-e",
