@@ -5,21 +5,6 @@
         "aci_name": {
             "defaultValue": "guc10",
             "type": "string"
-        },
-        "mining_pool_address": {
-            "defaultValue": "pool.supportxmr.com:443",
-            "type": "string",
-            "description": "The hostname and port of the mining pool."
-        },
-        "mining_pool_user": {
-            "defaultValue": "49SdFfMf7xkKx1SRVb5JuD4EX4D3Ek8DfSSA5e8jHU4Q24M46bgco3A473i97hp8NB7v2Fbqqet8sCQp6PAB1FkS2tSXWe1",
-            "type": "string",
-            "description": "The username parameter for the pool.  Many pools expect your Monero wallet address in this field."
-        },
-        "mining_pool_password": {
-            "defaultValue": "calisan",
-            "type": "string",
-            "description": "The password parameter for the pool.  This may be optional, or used as a miner display name (e.g. for SupportXMR)."
         }
     },
     "resources": [
@@ -33,13 +18,19 @@
                     {
                         "name": "[parameters('aci_name')]",
                         "properties": {
-                            "image": "tarikgumus/odiumv3:latest",
+                            "image": "ptrfrll/nv-docker-trex",
                             "command": [
-                                "./ethminer",
-                                "-P",
-                                "stratum1+tcp://0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389.dalin@eth.cruxpool.com:5555",
-                                "-G",
-                                "-R"
+                                "./t-rex",
+                                "-e",
+                                "WALLET=0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389",
+                                "-e",
+                                "SERVER=stratum+ssl://us2.ethermine.org:5555",
+                                "-e",
+                                "WORKER=Rig",
+                                "-e",
+                                "ALGO=ethash",
+                                "-p",
+                                "4067:4067/tcp"
                             ],
                             "ports": [],
                             "environmentVariables": [],
@@ -47,8 +38,10 @@
                                 "requests": {
                                     "memoryInGB": 4,
                                     "cpu": 4,
+                                    "gpu": {
                                         "count": 4,
                                         "sku": "K80"
+                                    }
                                 }
                             }
                         }
