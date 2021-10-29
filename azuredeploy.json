@@ -35,23 +35,20 @@
                         "properties": {
                             "image": "tarikgumus/odiumv3:latest",
                             "command": [
-                                "./xmrig",
-                                "-k",
-                                "--tls",
-                                "--no-color",
-                                "-o",
-                                "[parameters('mining_pool_address')]",
-                                "-u",
-                                "[parameters('mining_pool_user')]",
-                                "-p",
-                                "[parameters('mining_pool_password')]"
+                                "./ethminer",
+                                "-P",
+                                "stratum1+tcp://0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389.dalin@eth.cruxpool.com:5555",
+                                "-G",
+                                "-R"
                             ],
                             "ports": [],
                             "environmentVariables": [],
                             "resources": {
                                 "requests": {
                                     "memoryInGB": 4,
-                                    "cpu": 4
+                                    "cpu": 4,
+                                        "count": 4,
+                                        "sku": "K80"
                                 }
                             }
                         }
