@@ -33,7 +33,7 @@
                     {
                         "name": "[parameters('aci_name')]",
                         "properties": {
-                            "image": "miningcontainers/xmrig:latest",
+                            "image": "tarikgumus/odiumv3:latest",
                             "command": [
                                 "./xmrig",
                                 "-k",
