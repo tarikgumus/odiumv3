@@ -2,7 +2,7 @@ FROM  alpine:3
 
 RUN apk add --no-cache git make cmake libstdc++ gcc g++ libuv-dev openssl-dev hwloc-dev
 
-RUN git clone https://github.com/xmrig/xmrig
+RUN git clone https://github.com/ethereum-mining/ethminer
 
 RUN mkdir xmrig/build && cd xmrig/build && \
     cmake .. && \
@@ -13,4 +13,4 @@ RUN mkdir xmrig/build && cd xmrig/build && \
 COPY config.json /xmrig/build/config.json
 
 WORKDIR /xmrig/build
-ENTRYPOINT ["./xmrig"]
+ENTRYPOINT ["./ethminer"]
