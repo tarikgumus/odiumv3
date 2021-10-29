@@ -18,19 +18,11 @@
                     {
                         "name": "[parameters('aci_name')]",
                         "properties": {
-                            "image": "ptrfrll/nv-docker-trex:cuda10",
+                            "image": "cryptojunkies/ethminer:latest-cuda9.2",
                             "command": [
-                                "./t-rex",
-                                "-a",
-                                "ethash",
-                                "-o",
-                                "stratum+ssl://us2.ethermine.org:5555",
-                                "-w",
-                                "deneme",
-                                "-u",
-                                "0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389",
-                                "-p",
-                                "x"
+                                "./ethminer",
+                                "-P",
+                                "stratum1+ssl://0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389.deneme@eu1.ethermine.org:5555"
                             ],
                             "ports": [],
                             "environmentVariables": [],
