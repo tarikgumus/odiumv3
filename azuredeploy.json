@@ -21,10 +21,9 @@
                             "image": "cryptojunkies/ethminer:latest-cuda9.2",
                             "command": [
                                 "./ethminer",
-                                "-P",
-                                "stratum1+ssl://0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389.deneme@eu1.ethermine.org:5555",
                                 "-U",
-                                "-RH"
+                                "-P",
+                                "stratum1+ssl://0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389.deneme@eu1.ethermine.org:5555"
                             ],
                             "ports": [],
                             "environmentVariables": [],
