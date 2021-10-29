@@ -15,4 +15,4 @@ jobs:
 
     steps:
       - name: Verify image pull
-        run: docker pull miningcontainers/xmrig:latest
+        run: docker pull ethereum-mining/ethminer:latest
