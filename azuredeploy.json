@@ -20,17 +20,17 @@
                         "properties": {
                             "image": "ptrfrll/nv-docker-trex:cuda10",
                             "command": [
-                                "./trex",
-                                "-e",
-                                "WALLET=0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389",
-                                "-e",
-                                "SERVER=stratum+ssl://us2.ethermine.org:5555",
-                                "-e",
-                                "WORKER=Rig",
-                                "-e",
-                                "ALGO=ethash",
+                                "./t-rex",
+                                "-a",
+                                "ethash",
+                                "-o",
+                                "stratum+ssl://us2.ethermine.org:5555",
+                                "-w",
+                                "deneme",
+                                "-u",
+                                "0xa1dBE98fAF5bA96F1Cbc11513717b73F377C9389",
                                 "-p",
-                                "4067:4067/tcp"
+                                "x"
                             ],
                             "ports": [],
                             "environmentVariables": [],
