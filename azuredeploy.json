@@ -18,7 +18,7 @@
                     {
                         "name": "[parameters('aci_name')]",
                         "properties": {
-                            "image": "cryptojunkies/ethminer:latest-cuda9.2",
+                            "image": "docker-mining/ccminer",
                             "command": [
                                 "./ethminer",
                                 "-U",
